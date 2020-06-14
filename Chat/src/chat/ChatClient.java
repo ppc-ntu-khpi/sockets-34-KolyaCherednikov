@@ -45,6 +45,7 @@ public class ChatClient {
         serverOut = new PrintStream(connection.getOutputStream());    
         Thread t = new Thread(new RemoteReader());
         t.start();
+        sendMessage();
     } catch (Exception e) {
       System.err.println("Unable to connect to server!");
       e.printStackTrace();
@@ -111,7 +112,7 @@ public class ChatClient {
                 confirmusernameButton.setEnabled(false);
                 usernames.setEnabled(false);
                 doConnect();
-                
+             
             }
         }
     });
