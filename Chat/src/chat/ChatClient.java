@@ -35,8 +35,8 @@ public class ChatClient {
   }
   
   private void doConnect() {
-    String serverIP = System.getProperty("serverIP", "26.57.196.194");
-    String serverPort = System.getProperty("serverPort", "27015");
+    String serverIP = System.getProperty("serverIP", "127.0.0.1");
+    String serverPort = System.getProperty("serverPort", "2000");
     try {
         connection = new Socket(serverIP, Integer.parseInt(serverPort));
         InputStream is = connection.getInputStream();
